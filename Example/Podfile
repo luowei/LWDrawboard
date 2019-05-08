@@ -5,9 +5,11 @@ platform :ios, '8.0'
 target 'libDrawboard_Example' do
   pod 'libDrawboard', :path => '../'
 
-  target 'libDrawboard_Tests' do
-    inherit! :search_paths
+  pod 'libPhotoPicker', :git => 'https://gitlab.com/luo-wei/libphotopicker.git', :branch => 'master'
 
-    
-  end
+  # target 'libDrawboard_Tests' do
+  #   inherit! :search_paths
+  #
+  # end
+
 end

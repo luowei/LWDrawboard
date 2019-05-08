@@ -2,6 +2,9 @@ PODS:
   - libDrawboard (1.0.0):
     - Masonry
     - SDWebImage
+  - libPhotoPicker (0.1.0):
+    - Masonry
+    - SDWebImage
   - Masonry (1.1.0)
   - SDWebImage (5.0.1):
     - SDWebImage/Core (= 5.0.1)
@@ -9,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - libDrawboard (from `../`)
+  - libPhotoPicker (from `https://gitlab.com/luo-wei/libphotopicker.git`, branch `master`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -18,12 +22,21 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   libDrawboard:
     :path: "../"
+  libPhotoPicker:
+    :branch: master
+    :git: https://gitlab.com/luo-wei/libphotopicker.git
+
+CHECKOUT OPTIONS:
+  libPhotoPicker:
+    :commit: 62a1babdf8fad1a8c5d7928e67bf71a8ccac2fda
+    :git: https://gitlab.com/luo-wei/libphotopicker.git
 
 SPEC CHECKSUMS:
   libDrawboard: 1b88a5d28ee4e5aa6931bd5c00698ea78fcb659d
+  libPhotoPicker: c3fadddbdad40b323bbb8d59d18632470746027e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
 
-PODFILE CHECKSUM: 10f91e88793fddf76186bb1a9a857e49b37a39d9
+PODFILE CHECKSUM: 6181f66d0966ec01769d3447f9a30a431f220b21
 
 COCOAPODS: 1.5.3

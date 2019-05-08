@@ -16,7 +16,15 @@
 @class LWFontSelectorView;
 @class PHAsset;
 
+
+@protocol LWDrawWrapViewProtocol<NSObject>
+@optional
+- (void)requestImageForAsset:(PHAsset *)tileAsset size:(CGSize)size completion:(void (^)(UIImage *, NSDictionary *))completion;
+@end
+
 @interface LWDrawWrapView : UIView<LWDrawViewProtocol>
+
+@property(weak, nonatomic) id<LWDrawWrapViewProtocol> delegate;
 
 @property(strong, nonatomic) LWDrawView *drawView;
 @property(strong, nonatomic) LWDrawBar *drawBar;
@@ -25,7 +33,7 @@
 @property(nonatomic,strong) UIButton *editBtn;
 
 
-+ (LWDrawWrapView *)drawWrapView;
++ (LWDrawWrapView *)drawWrapViewWithDelegate:(id<LWDrawWrapViewProtocol>) delegate;
 
 - (void)editBtnAction:(UIButton *)editBtn;
 - (void)showDrawToolAction:(UIButton *)sender;

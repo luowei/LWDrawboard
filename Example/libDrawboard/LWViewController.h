@@ -8,6 +8,8 @@
 
 @import UIKit;
 
+@class LWPhotoPickerView;
+
 @interface LWViewController : UIViewController
 
 @end

@@ -85,6 +85,7 @@
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout {
     self = [super initWithFrame:frame collectionViewLayout:layout];
     if (self) {
+        self.backgroundColor = [UIColor whiteColor];
 
         self.delegate = self;
         self.dataSource = self;
@@ -138,7 +139,7 @@
                     break;
                 }
                 case 3: {    //打开阴影
-                    [cell.btn setImage:UIImageWithName(@"chinesePen", self) forState:UIControlStateNormal];
+                    [cell.btn setImage:UIImageWithName(@"shade", self) forState:UIControlStateNormal];
                     //[self sec1Collection:collectionView selIndexPath:indexPath cell:cell];
                     [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
                     LWDrawWrapView *drawWrapView = [self draw_superViewWithClass:[LWDrawWrapView class]];
@@ -146,7 +147,7 @@
                     break;
                 }
                 case 4: {    //颜色
-                    [cell.btn setImage:UIImageWithName(@"chinesePen", self) forState:UIControlStateNormal];
+                    [cell.btn setImage:UIImageWithName(@"colorInkWheel", self) forState:UIControlStateNormal];
                     [self sec1SelectStatusForCollection:collectionView indexPath:indexPath cell:cell];
                     break;
                 }

@@ -16,8 +16,9 @@
 
 @implementation LWDrawWrapView
 
-+ (LWDrawWrapView *)drawWrapView {
++ (LWDrawWrapView *)drawWrapViewWithDelegate:(id<LWDrawWrapViewProtocol>) delegate {
     LWDrawWrapView *wrapView = [LWDrawWrapView new];
+    wrapView.delegate = delegate;
     return wrapView;
 }
 
@@ -58,7 +59,7 @@
             make.bottom.equalTo(self);
             make.height.mas_equalTo(40);
         }];
-        self.drawBar.hidden = YES;  //设置初始约束，隐藏DrawBar工具条
+//        self.drawBar.hidden = YES;  //设置初始约束，隐藏DrawBar工具条
 
         //颜色指示
         self.colorTipView = [UIView new];
@@ -122,14 +123,9 @@
 - (void)requestTileImageForAsset:(PHAsset *)tileAsset size:(CGSize)size
       completion:(void (^)(UIImage *, NSDictionary *))completion {
 
-//    [self.photoPicker requestImageForAsset:tileAsset
-//                                      size:size
-//                               synchronous:YES
-//                                completion:^(UIImage *image, NSDictionary *info) {
-//                                    if (completion) {
-//                                        completion(image, info);
-//                                    }
-//                                }];
+    if([self.delegate respondsToSelector:@selector(requestImageForAsset:size:completion:)]){
+        [self.delegate requestImageForAsset:tileAsset size:size completion:completion];
+    }
 }
 
 
