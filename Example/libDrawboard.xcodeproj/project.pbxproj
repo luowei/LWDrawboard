@@ -24,6 +24,7 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		BEF0648216DB0F23810C3588 /* LWCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF065E015F7FB406C5031DB /* LWCategories.m */; };
 		BEF068B5AD411F4149901FB4 /* LWBrushBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF067A8DBD12CC95CC23C27 /* LWBrushBoardViewController.m */; };
+		BEF06DD74DF67816F6DDFE69 /* LWHandwrittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06786055D4C47C747671E /* LWHandwrittingViewController.m */; };
 		E48665213D70E36CC50B88C8 /* Pods_libDrawboard_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EC9027409F03341678A92A /* Pods_libDrawboard_Example.framework */; };
 		EA4022C522841AF400D06233 /* LWDrawBoardPenPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4022C122841AF400D06233 /* LWDrawBoardPenPickerView.m */; };
 		EA4022C622841AF400D06233 /* LWDrawboardColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4022C222841AF400D06233 /* LWDrawboardColorPickerView.m */; };
@@ -67,6 +68,8 @@
 		B8E33C3D258E32B81CC1A2B7 /* Pods-libDrawboard_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libDrawboard_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-libDrawboard_Example/Pods-libDrawboard_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BEF064317755D4FA73B12F2B /* LWCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWCategories.h; sourceTree = "<group>"; };
 		BEF065E015F7FB406C5031DB /* LWCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWCategories.m; sourceTree = "<group>"; };
+		BEF065F9465AA1E3B2F16D87 /* LWHandwrittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWHandwrittingViewController.h; sourceTree = "<group>"; };
+		BEF06786055D4C47C747671E /* LWHandwrittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWHandwrittingViewController.m; sourceTree = "<group>"; };
 		BEF067A8DBD12CC95CC23C27 /* LWBrushBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWBrushBoardViewController.m; sourceTree = "<group>"; };
 		BEF06F2F261D4F15A1D8649A /* LWBrushBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWBrushBoardViewController.h; sourceTree = "<group>"; };
 		C5EC9027409F03341678A92A /* Pods_libDrawboard_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libDrawboard_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +154,8 @@
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				BEF067A8DBD12CC95CC23C27 /* LWBrushBoardViewController.m */,
 				BEF06F2F261D4F15A1D8649A /* LWBrushBoardViewController.h */,
+				BEF06786055D4C47C747671E /* LWHandwrittingViewController.m */,
+				BEF065F9465AA1E3B2F16D87 /* LWHandwrittingViewController.h */,
 			);
 			name = "Example for libDrawboard";
 			path = libDrawboard;
@@ -387,6 +392,7 @@
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				BEF068B5AD411F4149901FB4 /* LWBrushBoardViewController.m in Sources */,
 				BEF0648216DB0F23810C3588 /* LWCategories.m in Sources */,
+				BEF06DD74DF67816F6DDFE69 /* LWHandwrittingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 #import "LWPhotoPicker.h"
 #import "LWDrawWrapView.h"
 #import "LWBrushBoardViewController.h"
+#import "LWHandwrittingViewController.h"
 #import <libDrawboard/LWDrawWrapView.h>
 #import <Masonry/Masonry-umbrella.h>
 
@@ -54,7 +55,7 @@
 
 //简单画板
 - (IBAction)simpleDrawboardAction:(id)sender {
-
+    [self.navigationController pushViewController:[LWHandwrittingViewController new] animated:YES];
 }
 
 //软笔画板
