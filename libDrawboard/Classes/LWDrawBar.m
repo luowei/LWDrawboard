@@ -1002,14 +1002,14 @@
 //根据字体获得指定大小的图片
 - (UIImage *)getFontImageWithSize:(CGSize)cellImgSize fontName:(NSString *)fontName withIndexPath:(NSIndexPath *)indexPath {
 //根据fontText,font以及cellImgSize,确定合适的fontSize,得到合适的文本矩形区attrTextRect
-    NSString *fontText = @"你好Abc";
+    NSString *fontText = @"好嗎Abc";
     CGFloat fontSize = 48;
     NSDictionary *attributes = nil;
     NSAttributedString *attrText = nil;
     CGRect attrTextRect = CGRectMake(0, 0, cellImgSize.width, cellImgSize.height);
     do {
         fontSize -= 4;
-        attributes = @{NSFontAttributeName : [UIFont fontWithName:fontName size:fontSize],NSForegroundColorAttributeName : [UIColor blackColor],NSBackgroundColorAttributeName : [UIColor clearColor]};
+        attributes = @{NSFontAttributeName : [UIFont fontWithName:fontName size:fontSize]?:[UIFont systemFontOfSize:fontSize],NSForegroundColorAttributeName : [UIColor blackColor],NSBackgroundColorAttributeName : [UIColor clearColor]};
         attrText = [[NSAttributedString alloc] initWithString:fontText attributes:attributes];
         attrTextRect = [attrText boundingRectWithSize:CGSizeMake(attrText.size.width, CGFLOAT_MAX)
                                               options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
