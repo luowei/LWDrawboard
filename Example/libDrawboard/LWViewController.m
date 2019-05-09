@@ -10,6 +10,7 @@
 #import "LWViewController.h"
 #import "LWPhotoPicker.h"
 #import "LWDrawWrapView.h"
+#import "LWBrushBoardViewController.h"
 #import <libDrawboard/LWDrawWrapView.h>
 #import <Masonry/Masonry-umbrella.h>
 
@@ -41,12 +42,24 @@
         make.left.equalTo(self.view).offset(10);
         make.bottom.equalTo(self.view).offset(-60);
     }];
+    [self.resetBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [self.resetBtn addTarget:self action:@selector(resetBtnAction) forControlEvents:UIControlEventTouchUpInside];
+
 
 }
 
 - (void)resetBtnAction {
     [self.drawWrapView resetDrawing];
+}
+
+//简单画板
+- (IBAction)simpleDrawboardAction:(id)sender {
+
+}
+
+//软笔画板
+- (IBAction)penDrawboardAction:(id)sender {
+    [self.navigationController pushViewController:[LWBrushBoardViewController new] animated:YES];
 }
 
 #pragma mark - LWDrawWrapViewProtocol

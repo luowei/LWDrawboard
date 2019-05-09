@@ -3,6 +3,7 @@
 // Copyright (c) 2016 wodedata. All rights reserved.
 //
 
+#import <objc/runtime.h>
 #import "BezierUtils.h"
 
 @implementation UIBezierPath (Rotate)
@@ -58,8 +59,6 @@
 @end
 
 
-
-
 @implementation NSString (UIImage)
 
 - (UIImage *)image:(CGSize)size {
@@ -91,7 +90,7 @@
     const CGFloat *oldComponentColors = CGColorGetComponents(oldCGColor);
     CGFloat newComponentColors[numberOfComponents];
 
-    int i = (int)numberOfComponents - 1;
+    int i = (int) numberOfComponents - 1;
     newComponentColors[i] = oldComponentColors[i]; // alpha
     while (--i >= 0) {
         newComponentColors[i] = 1 - oldComponentColors[i];
@@ -122,7 +121,7 @@
     CGColorSpaceRef colorSpace = CGColorGetColorSpace(self.CGColor);
     CGColorSpaceModel colorSpaceModel = CGColorSpaceGetModel(colorSpace);
 
-    if(colorSpaceModel == kCGColorSpaceModelRGB){
+    if (colorSpaceModel == kCGColorSpaceModelRGB) {
         const CGFloat *componentColors = CGColorGetComponents(self.CGColor);
 
         colorBrightness = ((componentColors[0] * 299) + (componentColors[1] * 587) + (componentColors[2] * 114)) / 1000;
@@ -180,8 +179,6 @@
 @end
 
 
-
-
 @implementation UIView (Extension)
 
 //获得指class类型的父视图
@@ -219,8 +216,7 @@
 @end
 
 
-
-@implementation UIImage(Ext)
+@implementation UIImage (Ext)
 
 //把字符串依据指定的字体属性及大小转换成图片
 + (UIImage *)imageFromString:(NSString *)string attributes:(NSDictionary *)attributes size:(CGSize)size {
@@ -264,4 +260,38 @@
 
 }
 
+//根据颜色与Size生成一张图片
++ (UIImage *)imageFromColor:(UIColor *)color withSize:(CGSize)size {
+    CGFloat scale = [UIScreen mainScreen].scale;
+    //UIGraphicsBeginImageContext(size);
+    UIGraphicsBeginImageContextWithOptions(size, NO, scale);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, CGRectMake(0, 0, size.width, size.height));
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
++ (UIImage *)circleWithColor:(UIColor *)color size:(CGSize)size {
+
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(ctx);
+
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    CGContextSetFillColorWithColor(ctx, [color CGColor]);
+    CGContextFillEllipseInRect(ctx, rect);
+
+    CGContextRestoreGState(ctx);
+    UIImage *circle = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return circle;
+}
+
+
 @end
+
+
+

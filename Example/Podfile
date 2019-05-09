@@ -6,6 +6,10 @@ target 'libDrawboard_Example' do
   pod 'libDrawboard', :path => '../'
 
   pod 'libPhotoPicker', :git => 'https://gitlab.com/luo-wei/libphotopicker.git', :branch => 'master'
+  pod 'libColorPicker', :git => 'https://gitlab.com/luo-wei/libcolorpicker.git', :branch => 'master'
+
+  pod 'Masonry'
+  pod 'MBProgressHUD'
 
   # target 'libDrawboard_Tests' do
   #   inherit! :search_paths

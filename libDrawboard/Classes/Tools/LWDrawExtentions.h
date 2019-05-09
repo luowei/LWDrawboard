@@ -75,4 +75,9 @@
 + (UIImage *)addImageToImage:(UIImage *)img withImage2:(UIImage *)img2
                      andRect:(CGRect)cropRect withImageSize:(CGSize)size;
 
++ (UIImage *)imageFromColor:(UIColor *)color withSize:(CGSize)size;
+
++ (UIImage *)circleWithColor:(UIColor *)color size:(CGSize)size;
+
 @end
+
