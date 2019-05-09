@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "LWViewController.h"
 #import "LWPhotoPicker.h"
+#import "LWDrawWrapView.h"
 #import <libDrawboard/LWDrawWrapView.h>
 #import <Masonry/Masonry-umbrella.h>
 
 @interface LWViewController () <LWDrawWrapViewProtocol>
 
 @property(nonatomic, strong) LWPhotoPicker *photoPicker;
+@property(nonatomic, strong) UIButton *resetBtn;
+@property(nonatomic, strong) LWDrawWrapView *drawWrapView;
 @end
 
 @implementation LWViewController
@@ -23,15 +26,34 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    LWDrawWrapView *drawWrapView = [LWDrawWrapView drawWrapViewWithDelegate:self];
-    [self.view addSubview:drawWrapView];
-    [drawWrapView mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.photoPicker = [LWPhotoPicker new];
+
+    self.drawWrapView = [LWDrawWrapView drawWrapViewWithDelegate:self];
+    [self.view addSubview:self.drawWrapView];
+    [self.drawWrapView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
+    
+    self.resetBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.resetBtn];
+    [self.resetBtn setTitle:@"重置" forState:UIControlStateNormal];
+    [self.resetBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(10);
+        make.bottom.equalTo(self.view).offset(-60);
+    }];
+    [self.resetBtn addTarget:self action:@selector(resetBtnAction) forControlEvents:UIControlEventTouchUpInside];
 
 }
 
+- (void)resetBtnAction {
+    [self.drawWrapView resetDrawing];
+}
+
 #pragma mark - LWDrawWrapViewProtocol
+
+- (NSArray<PHAsset *> *)getAllAssetInPhotoAblumWithAscending:(BOOL)ascending{
+    return [self.photoPicker getAllAssetInPhotoAblumWithAscending:NO];
+}
 
 - (void)requestImageForAsset:(PHAsset *)tileAsset size:(CGSize)size completion:(void (^)(UIImage *, NSDictionary *))completion {
 

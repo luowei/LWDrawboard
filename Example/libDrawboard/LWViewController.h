@@ -9,6 +9,7 @@
 @import UIKit;
 
 @class LWPhotoPickerView;
+@class LWDrawWrapView;
 
 @interface LWViewController : UIViewController
 

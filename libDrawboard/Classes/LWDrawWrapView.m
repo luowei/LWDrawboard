@@ -44,7 +44,7 @@
         [self.editBtn setImage:UIImageWithName(@"EditBtn",self) forState:UIControlStateNormal];
         [self.editBtn setImage:UIImageWithName(@"NoEditBtn",self) forState:UIControlStateSelected];
         [self.editBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self).offset(6);
+            make.top.equalTo(self).offset(30);
             make.right.equalTo(self).offset(-6);
             make.width.height.mas_equalTo(30);
         }];
@@ -78,6 +78,12 @@
 
 
 #pragma mark - Action
+
+
+-(void)resetDrawing {
+    [self.drawView resetDrawing];
+}
+
 
 - (void)editBtnAction:(UIButton *)editBtn {
 
@@ -114,7 +120,9 @@
 
 
 - (NSArray<PHAsset *> *)getAllAssetInPhotoAblumWithAscending:(BOOL)ascending{
-//    return [self.photoPicker getAllAssetInPhotoAblumWithAscending:NO];
+    if([self.delegate respondsToSelector:@selector(getAllAssetInPhotoAblumWithAscending:)]){
+        return [self.delegate getAllAssetInPhotoAblumWithAscending:NO];
+    }
     return nil;
 }
 

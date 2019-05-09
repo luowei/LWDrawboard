@@ -19,6 +19,7 @@
 
 @protocol LWDrawWrapViewProtocol<NSObject>
 @optional
+- (NSArray<PHAsset *> *)getAllAssetInPhotoAblumWithAscending:(BOOL)ascending;
 - (void)requestImageForAsset:(PHAsset *)tileAsset size:(CGSize)size completion:(void (^)(UIImage *, NSDictionary *))completion;
 @end
 
@@ -35,6 +36,8 @@
 
 + (LWDrawWrapView *)drawWrapViewWithDelegate:(id<LWDrawWrapViewProtocol>) delegate;
 
+
+-(void)resetDrawing;
 - (void)editBtnAction:(UIButton *)editBtn;
 - (void)showDrawToolAction:(UIButton *)sender;
 
