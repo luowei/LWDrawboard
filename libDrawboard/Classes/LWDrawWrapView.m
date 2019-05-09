@@ -43,6 +43,8 @@
         [self addSubview:self.editBtn];
         [self.editBtn setImage:UIImageWithName(@"EditBtn",self) forState:UIControlStateNormal];
         [self.editBtn setImage:UIImageWithName(@"NoEditBtn",self) forState:UIControlStateSelected];
+        self.editBtn.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5];
+        self.editBtn.layer.cornerRadius = 4;
         [self.editBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self).offset(30);
             make.right.equalTo(self).offset(-6);
@@ -96,27 +98,6 @@
     }
 }
 
-- (void)showDrawToolAction:(UIButton *)btn{
-
-    if(self.drawBar.hidden){
-        btn.selected = YES;
-        self.drawBar.hidden = NO;
-    }else{
-        btn.selected = NO;
-        self.drawBar.hidden = YES;
-
-        //清除DrawWrapView下的PopView
-        for(UIView *view in self.subviews){
-            if([view isKindOfClass:[LWColorSelectorView class]]
-                    || [view isKindOfClass:[LWTileImagesView class]]
-                    || [view isKindOfClass:[LWFontSelectorView class]]){
-                [view removeFromSuperview];
-            }
-        }
-    }
-    [self setNeedsLayout];
-
-}
 
 
 - (NSArray<PHAsset *> *)getAllAssetInPhotoAblumWithAscending:(BOOL)ascending{

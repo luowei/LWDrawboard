@@ -82,30 +82,36 @@ CGSize fitPageToScreen(CGSize page, CGSize screen) {
         //Setup View
         self.textView = [LWScratchTextView new];
         [self addSubview:self.textView];
-        self.textVConstX = [NSLayoutConstraint constraintWithItem:self.textView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1 constant:106];
+        self.textView.translatesAutoresizingMaskIntoConstraints = NO;
+        self.textVConstX = [NSLayoutConstraint constraintWithItem:self.textView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:106];
         self.textVConstY = [NSLayoutConstraint constraintWithItem:self.textView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1 constant:150];
-        self.textVWidth = [NSLayoutConstraint constraintWithItem:self.textView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1 constant:30];
-        self.textVHeight = [NSLayoutConstraint constraintWithItem:self.textView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1 constant:20];
+        self.textVWidth = [NSLayoutConstraint constraintWithItem:self.textView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute  multiplier:1 constant:30];
+        self.textVHeight = [NSLayoutConstraint constraintWithItem:self.textView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute  multiplier:1 constant:20];
         [NSLayoutConstraint activateConstraints:@[self.textVConstX,self.textVConstY,self.textVWidth,self.textVHeight]];
+        self.textView.delegate = self;
         self.textView.backgroundColor = [UIColor clearColor];
         self.textView.hidden = YES;
 
 
         self.controlView = [LWControlView new];
         [self addSubview:self.controlView];
-        self.controlViewConstX = [NSLayoutConstraint constraintWithItem:self.controlView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1 constant:20];
-        self.controlViewConstY = [NSLayoutConstraint constraintWithItem:self.controlView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1 constant:20];
-        self.controlViewWidth = [NSLayoutConstraint constraintWithItem:self.controlView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1 constant:100];
-        self.controlViewHeight = [NSLayoutConstraint constraintWithItem:self.controlView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1 constant:100];
+        self.controlView.translatesAutoresizingMaskIntoConstraints = NO;
+        self.controlViewConstX = [NSLayoutConstraint constraintWithItem:self.controlView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:20];
+        self.controlViewConstY = [NSLayoutConstraint constraintWithItem:self.controlView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1 constant:180];
+        self.controlViewWidth = [NSLayoutConstraint constraintWithItem:self.controlView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute  multiplier:1 constant:100];
+        self.controlViewHeight = [NSLayoutConstraint constraintWithItem:self.controlView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute  multiplier:1 constant:100];
+        [NSLayoutConstraint activateConstraints:@[self.controlViewConstX,self.controlViewConstY,self.controlViewWidth,self.controlViewHeight]];
         self.controlView.backgroundColor = [UIColor clearColor];
         self.controlView.hidden = YES;
 
 
-        self.control = [LWControlImgV new];
+        self.control = [[LWControlImgV alloc] initWithImage:UIImageWithName(@"controlBtn", self)];
         [self addSubview:self.control];
-        self.controlConstX = [NSLayoutConstraint constraintWithItem:self.control attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeading multiplier:1 constant:60];
-        self.controlConstY = [NSLayoutConstraint constraintWithItem:self.control attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1 constant:30];
-
+        self.control.translatesAutoresizingMaskIntoConstraints = NO;
+        self.controlConstX = [NSLayoutConstraint constraintWithItem:self.control attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:30];
+        self.controlConstY = [NSLayoutConstraint constraintWithItem:self.control attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1 constant:120];
+        [NSLayoutConstraint activateConstraints:@[self.controlConstX,self.controlConstY]];
+        self.control.hidden = YES;
 
     }
 
@@ -1482,9 +1488,6 @@ CGSize fitPageToScreen(CGSize page, CGSize screen) {
 
 @implementation LWScratchTextView
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
 
 - (void)setHidden:(BOOL)hidden {
     [super setHidden:hidden];
@@ -1518,19 +1521,24 @@ CGSize fitPageToScreen(CGSize page, CGSize screen) {
 
         self.rotate = [[LWControlImgV alloc] initWithImage:UIImageWithName(@"rotateBtn", self)];
         [self addSubview:self.rotate];
-        [self.rotate mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self).offset(10);
-            make.top.equalTo(self).offset(-10);
-            make.width.height.mas_equalTo(20);
-        }];
-
+        self.rotate.translatesAutoresizingMaskIntoConstraints = NO;
+//        self.rotate.frame = CGRectMake(CGRectGetWidth(frame)-10, -10, 20, 20);
+        NSLayoutConstraint *xCons = [NSLayoutConstraint constraintWithItem:self.rotate attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:10];
+        NSLayoutConstraint *yCons = [NSLayoutConstraint constraintWithItem:self.rotate attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:-10];
+        NSLayoutConstraint *wCons = [NSLayoutConstraint constraintWithItem:self.rotate attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:20];
+        NSLayoutConstraint *hCons = [NSLayoutConstraint constraintWithItem:self.rotate attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:20];
+        [NSLayoutConstraint activateConstraints:@[xCons,yCons,wCons,hCons]];
 
         self.control = [[LWControlImgV alloc] initWithImage:UIImageWithName(@"controlBtn", self)];
         [self addSubview:self.control];
-        [self.control mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.bottom.equalTo(self).offset(10);
-            make.width.height.mas_equalTo(20);
-        }];
+        self.control.translatesAutoresizingMaskIntoConstraints = NO;
+//        self.control.frame = CGRectMake(CGRectGetWidth(frame)-10, CGRectGetHeight(frame)-10, 20, 20);
+        NSLayoutConstraint *x_Cons = [NSLayoutConstraint constraintWithItem:self.control attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:10];
+        NSLayoutConstraint *y_Cons = [NSLayoutConstraint constraintWithItem:self.control attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:10];
+        NSLayoutConstraint *w_Cons = [NSLayoutConstraint constraintWithItem:self.control attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:20];
+        NSLayoutConstraint *h_Cons = [NSLayoutConstraint constraintWithItem:self.control attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:20];
+        [NSLayoutConstraint activateConstraints:@[x_Cons,y_Cons,w_Cons,h_Cons]];
+
     }
 
     return self;
