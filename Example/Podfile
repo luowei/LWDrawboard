@@ -5,10 +5,10 @@ platform :ios, '8.0'
 target 'LWDrawboard_Example' do
   pod 'LWDrawboard', :path => '../'
 
-  # pod 'libPhotoPicker', :git => 'https://gitlab.com/ioslibraries1/libphotopicker.git', :branch => 'master'
-  # pod 'libColorPicker', :git => 'https://gitlab.com/ioslibraries1/libcolorpicker.git', :branch => 'master'
-  pod 'libPhotoPicker', :path => '../../libPhotoPicker', :branch => 'master'
-  pod 'libColorPicker', :path => '../../libColorPicker', :branch => 'master'
+  pod 'LWPhotoPicker', :git => 'https://gitlab.com/ioslibraries1/libphotopicker.git', :branch => 'master'
+  pod 'LWColorPicker', :git => 'https://gitlab.com/ioslibraries1/libcolorpicker.git', :branch => 'master'
+  # pod 'LWPhotoPicker', :path => '../../LWPhotoPicker', :branch => 'master'
+  # pod 'LWColorPicker', :path => '../../LWColorPicker', :branch => 'master'
 
   pod 'Masonry'
   pod 'MBProgressHUD'
