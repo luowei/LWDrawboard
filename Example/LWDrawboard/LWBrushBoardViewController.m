@@ -10,8 +10,8 @@
 #import <Photos/Photos.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <MBProgressHUD/MBProgressHUD.h>
-#import <libDrawboard/AFBrushBoard.h>
-#import <libDrawboard/LWDrawExtentions.h>
+#import <LWDrawboard/AFBrushBoard.h>
+#import <LWDrawboard/LWDrawExtentions.h>
 
 
 @interface LWBrushBoardViewController()<LWDrawboardColorPickerViewDelegate,LWDrawBoardPenPickerViewDelegate>

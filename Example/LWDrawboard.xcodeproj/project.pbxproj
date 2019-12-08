@@ -22,10 +22,10 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		8DD94B8BAB3CCE064628FD94 /* Pods_LWDrawboard_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87BF12EF7777EA00B08FBEAD /* Pods_LWDrawboard_Example.framework */; };
 		BEF0648216DB0F23810C3588 /* LWCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF065E015F7FB406C5031DB /* LWCategories.m */; };
 		BEF068B5AD411F4149901FB4 /* LWBrushBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF067A8DBD12CC95CC23C27 /* LWBrushBoardViewController.m */; };
 		BEF06DD74DF67816F6DDFE69 /* LWHandwrittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06786055D4C47C747671E /* LWHandwrittingViewController.m */; };
-		E48665213D70E36CC50B88C8 /* Pods_libDrawboard_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EC9027409F03341678A92A /* Pods_libDrawboard_Example.framework */; };
 		EA4022C522841AF400D06233 /* LWDrawBoardPenPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4022C122841AF400D06233 /* LWDrawBoardPenPickerView.m */; };
 		EA4022C622841AF400D06233 /* LWDrawboardColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4022C222841AF400D06233 /* LWDrawboardColorPickerView.m */; };
 /* End PBXBuildFile section */
@@ -36,44 +36,46 @@
 			containerPortal = 6003F582195388D10070C39A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6003F589195388D20070C39A;
-			remoteInfo = libDrawboard;
+			remoteInfo = LWDrawboard;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6003F58A195388D20070C39A /* libDrawboard_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = libDrawboard_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51D64D0176CD9DAC161B60B6 /* Pods-LWDrawboard_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWDrawboard_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LWDrawboard_Example/Pods-LWDrawboard_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* LWDrawboard_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LWDrawboard_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6003F595195388D20070C39A /* libDrawboard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "libDrawboard-Info.plist"; sourceTree = "<group>"; };
+		6003F595195388D20070C39A /* LWDrawboard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LWDrawboard-Info.plist"; sourceTree = "<group>"; };
 		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6003F59B195388D20070C39A /* libDrawboard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libDrawboard-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* LWDrawboard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LWDrawboard-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* LWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* LWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWAppDelegate.m; sourceTree = "<group>"; };
 		6003F5A5195388D20070C39A /* LWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* LWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* libDrawboard_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libDrawboard_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* LWDrawboard_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LWDrawboard_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7FF2122BF06CEA1B44044833 /* libDrawboard.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = libDrawboard.podspec; path = ../libDrawboard.podspec; sourceTree = "<group>"; };
-		860A45B5F08FCB39AA7EC702 /* Pods_libDrawboard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libDrawboard_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FF2122BF06CEA1B44044833 /* LWDrawboard.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LWDrawboard.podspec; path = ../LWDrawboard.podspec; sourceTree = "<group>"; };
+		860A45B5F08FCB39AA7EC702 /* Pods_LWDrawboard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LWDrawboard_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87BF12EF7777EA00B08FBEAD /* Pods_LWDrawboard_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LWDrawboard_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9338C7A9127153F8ED315A14 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B8E33C3D258E32B81CC1A2B7 /* Pods-libDrawboard_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libDrawboard_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-libDrawboard_Example/Pods-libDrawboard_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A458433F839D07A51172EC41 /* Pods-LWDrawboard_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWDrawboard_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LWDrawboard_Example/Pods-LWDrawboard_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B8E33C3D258E32B81CC1A2B7 /* Pods-LWDrawboard_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWDrawboard_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LWDrawboard_Example/Pods-LWDrawboard_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BEF064317755D4FA73B12F2B /* LWCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWCategories.h; sourceTree = "<group>"; };
 		BEF065E015F7FB406C5031DB /* LWCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWCategories.m; sourceTree = "<group>"; };
 		BEF065F9465AA1E3B2F16D87 /* LWHandwrittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWHandwrittingViewController.h; sourceTree = "<group>"; };
 		BEF06786055D4C47C747671E /* LWHandwrittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWHandwrittingViewController.m; sourceTree = "<group>"; };
 		BEF067A8DBD12CC95CC23C27 /* LWBrushBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWBrushBoardViewController.m; sourceTree = "<group>"; };
 		BEF06F2F261D4F15A1D8649A /* LWBrushBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWBrushBoardViewController.h; sourceTree = "<group>"; };
-		C5EC9027409F03341678A92A /* Pods_libDrawboard_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libDrawboard_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9851D710E25200970EB1838 /* Pods-libDrawboard_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libDrawboard_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-libDrawboard_Example/Pods-libDrawboard_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C9851D710E25200970EB1838 /* Pods-LWDrawboard_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWDrawboard_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LWDrawboard_Example/Pods-LWDrawboard_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E35FF294BA019076FEE3475B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EA4022C122841AF400D06233 /* LWDrawBoardPenPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWDrawBoardPenPickerView.m; sourceTree = "<group>"; };
 		EA4022C222841AF400D06233 /* LWDrawboardColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWDrawboardColorPickerView.m; sourceTree = "<group>"; };
@@ -89,7 +91,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				E48665213D70E36CC50B88C8 /* Pods_libDrawboard_Example.framework in Frameworks */,
+				8DD94B8BAB3CCE064628FD94 /* Pods_LWDrawboard_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F593195388D20070C39A /* Example for libDrawboard */,
+				6003F593195388D20070C39A /* Example for LWDrawboard */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
@@ -121,8 +123,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* libDrawboard_Example.app */,
-				6003F5AE195388D20070C39A /* libDrawboard_Tests.xctest */,
+				6003F58A195388D20070C39A /* LWDrawboard_Example.app */,
+				6003F5AE195388D20070C39A /* LWDrawboard_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,13 +136,13 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				C5EC9027409F03341678A92A /* Pods_libDrawboard_Example.framework */,
-				860A45B5F08FCB39AA7EC702 /* Pods_libDrawboard_Tests.framework */,
+				860A45B5F08FCB39AA7EC702 /* Pods_LWDrawboard_Tests.framework */,
+				87BF12EF7777EA00B08FBEAD /* Pods_LWDrawboard_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6003F593195388D20070C39A /* Example for libDrawboard */ = {
+		6003F593195388D20070C39A /* Example for LWDrawboard */ = {
 			isa = PBXGroup;
 			children = (
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -157,17 +159,17 @@
 				BEF06786055D4C47C747671E /* LWHandwrittingViewController.m */,
 				BEF065F9465AA1E3B2F16D87 /* LWHandwrittingViewController.h */,
 			);
-			name = "Example for libDrawboard";
-			path = libDrawboard;
+			name = "Example for LWDrawboard";
+			path = LWDrawboard;
 			sourceTree = "<group>";
 		};
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6003F595195388D20070C39A /* libDrawboard-Info.plist */,
+				6003F595195388D20070C39A /* LWDrawboard-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
-				6003F59B195388D20070C39A /* libDrawboard-Prefix.pch */,
+				6003F59B195388D20070C39A /* LWDrawboard-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -194,7 +196,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				7FF2122BF06CEA1B44044833 /* libDrawboard.podspec */,
+				7FF2122BF06CEA1B44044833 /* LWDrawboard.podspec */,
 				9338C7A9127153F8ED315A14 /* README.md */,
 				E35FF294BA019076FEE3475B /* LICENSE */,
 			);
@@ -217,8 +219,10 @@
 		C1FBB866317DE5CE540C18C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C9851D710E25200970EB1838 /* Pods-libDrawboard_Example.debug.xcconfig */,
-				B8E33C3D258E32B81CC1A2B7 /* Pods-libDrawboard_Example.release.xcconfig */,
+				C9851D710E25200970EB1838 /* Pods-LWDrawboard_Example.debug.xcconfig */,
+				B8E33C3D258E32B81CC1A2B7 /* Pods-LWDrawboard_Example.release.xcconfig */,
+				51D64D0176CD9DAC161B60B6 /* Pods-LWDrawboard_Example.debug.xcconfig */,
+				A458433F839D07A51172EC41 /* Pods-LWDrawboard_Example.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -226,9 +230,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6003F589195388D20070C39A /* libDrawboard_Example */ = {
+		6003F589195388D20070C39A /* LWDrawboard_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "libDrawboard_Example" */;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "LWDrawboard_Example" */;
 			buildPhases = (
 				310A27A9EC95621E8C09E141 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
@@ -240,14 +244,14 @@
 			);
 			dependencies = (
 			);
-			name = libDrawboard_Example;
-			productName = libDrawboard;
-			productReference = 6003F58A195388D20070C39A /* libDrawboard_Example.app */;
+			name = LWDrawboard_Example;
+			productName = LWDrawboard;
+			productReference = 6003F58A195388D20070C39A /* LWDrawboard_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6003F5AD195388D20070C39A /* libDrawboard_Tests */ = {
+		6003F5AD195388D20070C39A /* LWDrawboard_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "libDrawboard_Tests" */;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "LWDrawboard_Tests" */;
 			buildPhases = (
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
@@ -258,9 +262,9 @@
 			dependencies = (
 				6003F5B4195388D20070C39A /* PBXTargetDependency */,
 			);
-			name = libDrawboard_Tests;
-			productName = libDrawboardTests;
-			productReference = 6003F5AE195388D20070C39A /* libDrawboard_Tests.xctest */;
+			name = LWDrawboard_Tests;
+			productName = LWDrawboardTests;
+			productReference = 6003F5AE195388D20070C39A /* LWDrawboard_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -282,11 +286,12 @@
 					};
 				};
 			};
-			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "libDrawboard" */;
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "LWDrawboard" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -295,8 +300,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6003F589195388D20070C39A /* libDrawboard_Example */,
-				6003F5AD195388D20070C39A /* libDrawboard_Tests */,
+				6003F589195388D20070C39A /* LWDrawboard_Example */,
+				6003F5AD195388D20070C39A /* LWDrawboard_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -339,7 +344,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-libDrawboard_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LWDrawboard_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -352,26 +357,26 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-libDrawboard_Example/Pods-libDrawboard_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LWDrawboard_Example/Pods-LWDrawboard_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LWDrawboard/LWDrawboard.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/libColorPicker/libColorPicker.framework",
-				"${BUILT_PRODUCTS_DIR}/libDrawboard/libDrawboard.framework",
 				"${BUILT_PRODUCTS_DIR}/libPhotoPicker/libPhotoPicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LWDrawboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libColorPicker.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libDrawboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libPhotoPicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-libDrawboard_Example/Pods-libDrawboard_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LWDrawboard_Example/Pods-LWDrawboard_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -405,7 +410,7 @@
 /* Begin PBXTargetDependency section */
 		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6003F589195388D20070C39A /* libDrawboard_Example */;
+			target = 6003F589195388D20070C39A /* LWDrawboard_Example */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -513,15 +518,15 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9851D710E25200970EB1838 /* Pods-libDrawboard_Example.debug.xcconfig */;
+			baseConfigurationReference = 51D64D0176CD9DAC161B60B6 /* Pods-LWDrawboard_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G3A2KYKYBU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "libDrawboard/libDrawboard-Prefix.pch";
-				INFOPLIST_FILE = "libDrawboard/libDrawboard-Info.plist";
+				GCC_PREFIX_HEADER = "LWDrawboard/LWDrawboard-Prefix.pch";
+				INFOPLIST_FILE = "LWDrawboard/LWDrawboard-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wodedata.libDrawboard-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wodedata.LWDrawboard-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -529,15 +534,15 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8E33C3D258E32B81CC1A2B7 /* Pods-libDrawboard_Example.release.xcconfig */;
+			baseConfigurationReference = A458433F839D07A51172EC41 /* Pods-LWDrawboard_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G3A2KYKYBU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "libDrawboard/libDrawboard-Prefix.pch";
-				INFOPLIST_FILE = "libDrawboard/libDrawboard-Info.plist";
+				GCC_PREFIX_HEADER = "LWDrawboard/LWDrawboard-Prefix.pch";
+				INFOPLIST_FILE = "LWDrawboard/LWDrawboard-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wodedata.libDrawboard-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wodedata.LWDrawboard-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -562,7 +567,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libDrawboard_Example.app/libDrawboard_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LWDrawboard_Example.app/LWDrawboard_Example";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -582,7 +587,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libDrawboard_Example.app/libDrawboard_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LWDrawboard_Example.app/LWDrawboard_Example";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -590,7 +595,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6003F585195388D10070C39A /* Build configuration list for PBXProject "libDrawboard" */ = {
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "LWDrawboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5BD195388D20070C39A /* Debug */,
@@ -599,7 +604,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "libDrawboard_Example" */ = {
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "LWDrawboard_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5C0195388D20070C39A /* Debug */,
@@ -608,7 +613,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "libDrawboard_Tests" */ = {
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "LWDrawboard_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6003F5C3195388D20070C39A /* Debug */,

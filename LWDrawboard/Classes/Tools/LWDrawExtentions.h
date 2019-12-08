@@ -9,7 +9,7 @@
 #define DrawLog(...)
 #endif
 
-#define LWDrawboardBundle(obj)  ([NSBundle bundleWithPath:[[NSBundle bundleForClass:[obj class]] pathForResource:@"libDrawboard" ofType:@"bundle"]] ?: ([NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"libDrawboard " ofType:@"bundle"]] ?: [NSBundle mainBundle]))
+#define LWDrawboardBundle(obj)  ([NSBundle bundleWithPath:[[NSBundle bundleForClass:[obj class]] pathForResource:@"LWDrawboard" ofType:@"bundle"]] ?: ([NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"LWDrawboard " ofType:@"bundle"]] ?: [NSBundle mainBundle]))
 #define UIImageWithName(name,obj) ([UIImage imageNamed:name inBundle:LWDrawboardBundle(obj) compatibleWithTraitCollection:nil])
 
 //#define HexRGBAColor(hexValue, alphaValue) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:alphaValue]

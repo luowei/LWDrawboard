@@ -1,6 +1,6 @@
 //
 //  LWViewController.m
-//  libDrawboard
+//  LWDrawboard
 //
 //  Created by luowei on 05/08/2019.
 //  Copyright (c) 2019 luowei. All rights reserved.
@@ -12,7 +12,7 @@
 #import "LWDrawWrapView.h"
 #import "LWBrushBoardViewController.h"
 #import "LWHandwrittingViewController.h"
-#import <libDrawboard/LWDrawWrapView.h>
+#import <LWDrawboard/LWDrawWrapView.h>
 #import <Masonry/Masonry-umbrella.h>
 
 @interface LWViewController () <LWDrawWrapViewProtocol>

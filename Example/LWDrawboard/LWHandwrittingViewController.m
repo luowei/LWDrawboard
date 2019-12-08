@@ -3,8 +3,8 @@
 // Copyright (c) 2019 luowei. All rights reserved.
 //
 
-#import <libDrawboard/LWHandwrittingView.h>
-#import <libDrawboard/LWDrawExtentions.h>
+#import <LWDrawboard/LWHandwrittingView.h>
+#import <LWDrawboard/LWDrawExtentions.h>
 #import <Masonry/Masonry.h>
 #import "LWHandwrittingViewController.h"
 #import "LWDrawExtentions.h"

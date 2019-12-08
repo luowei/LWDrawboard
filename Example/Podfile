@@ -2,16 +2,18 @@ use_frameworks!
 
 platform :ios, '8.0'
 
-target 'libDrawboard_Example' do
-  pod 'libDrawboard', :path => '../'
+target 'LWDrawboard_Example' do
+  pod 'LWDrawboard', :path => '../'
 
-  pod 'libPhotoPicker', :git => 'https://gitlab.com/luo-wei/libphotopicker.git', :branch => 'master'
-  pod 'libColorPicker', :git => 'https://gitlab.com/luo-wei/libcolorpicker.git', :branch => 'master'
+  # pod 'libPhotoPicker', :git => 'https://gitlab.com/ioslibraries1/libphotopicker.git', :branch => 'master'
+  # pod 'libColorPicker', :git => 'https://gitlab.com/ioslibraries1/libcolorpicker.git', :branch => 'master'
+  pod 'libPhotoPicker', :path => '../../libPhotoPicker', :branch => 'master'
+  pod 'libColorPicker', :path => '../../libColorPicker', :branch => 'master'
 
   pod 'Masonry'
   pod 'MBProgressHUD'
 
-  # target 'libDrawboard_Tests' do
+  # target 'LWDrawboard_Tests' do
   #   inherit! :search_paths
   #
   # end

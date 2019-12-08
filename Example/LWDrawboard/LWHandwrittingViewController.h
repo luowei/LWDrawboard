@@ -4,7 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <libDrawboard/LWHandwrittingView.h>
+#import <LWDrawboard/LWHandwrittingView.h>
 
 @class LWHandWrittingWrapView;
 
