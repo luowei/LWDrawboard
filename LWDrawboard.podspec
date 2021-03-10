@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'LWDrawboard'
   s.version          = '1.0.0'
-  s.summary          = 'A short description of LWDrawboard.'
+  s.summary          = '一个可自定义笔触大小颜色的画板和涂鸦板。'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,14 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+LWDrawboard，可自定义笔触大小颜色的画板涂鸦板，绘制的矩形、圆形、多边形、箭头、文字的颜色大小形状可调节，并且支持马塞克、裁剪等功能。
                        DESC
 
-  s.homepage         = 'https://gitlab.com/ioslibraries1/libdrawboard.git'
+  s.homepage         = 'https://github.com/luowei/LWDrawboard.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'luowei' => 'luowei@wodedata.com' }
-  s.source           = { :git => 'https://gitlab.com/ioslibraries1/libdrawboard.git' }
+  s.source           = { :git => 'https://github.com/luowei/LWDrawboard.git'}
+  # s.source           = { :git => 'https://gitlab.com/ioslibraries1/libdrawboard.git' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
