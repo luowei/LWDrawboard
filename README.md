@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/LWDrawboard.svg?style=flat)](https://cocoapods.org/pods/LWDrawboard)
 [![Platform](https://img.shields.io/cocoapods/p/LWDrawboard.svg?style=flat)](https://cocoapods.org/pods/LWDrawboard)
 
-[English](./README.md) | [中文版](./README_ZH.md)
+[English](./README.md) | [中文版](./README_ZH.md) | [Swift Version](./README_SWIFT_VERSION.md)
 
 ## Table of Contents
 

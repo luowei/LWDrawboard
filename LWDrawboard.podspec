@@ -32,6 +32,7 @@ LWDrawboard，可自定义笔触大小颜色的画板涂鸦板，绘制的矩形
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'LWDrawboard/Classes/**/*'
+  s.exclude_files = 'LWDrawboard/SwiftUI/**/*.swift'
   
   s.resource_bundles = {
     'LWDrawboard' => ['LWDrawboard/Assets/**/*']
