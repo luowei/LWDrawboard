@@ -1,5 +1,12 @@
 # LWDrawboard
 
+
+## graphify Knowledge Graph
+
+- Interactive graph: https://luowei.github.io/LWDrawboard/
+- Report: https://luowei.github.io/LWDrawboard/GRAPH_REPORT.md
+- Graph data: https://luowei.github.io/LWDrawboard/graph.json
+
 [![CI Status](https://img.shields.io/travis/luowei/LWDrawboard.svg?style=flat)](https://travis-ci.org/luowei/LWDrawboard)
 [![Version](https://img.shields.io/cocoapods/v/LWDrawboard.svg?style=flat)](https://cocoapods.org/pods/LWDrawboard)
 [![License](https://img.shields.io/cocoapods/l/LWDrawboard.svg?style=flat)](https://cocoapods.org/pods/LWDrawboard)
